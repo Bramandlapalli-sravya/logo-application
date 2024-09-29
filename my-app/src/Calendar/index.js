@@ -184,6 +184,7 @@ const CalendarComponent = () => {
         selectedTime={selectedTime} // Pass selected time
         handleBooking={handleBooking} // Pass the booking function to the modal
       />
+      
     </div>
   );
 };
