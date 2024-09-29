@@ -1,0 +1,113 @@
+.rbc-timeslot-group {
+  min-height: 70px;
+}
+
+.rbc-day-slot .rbc-time-slot {
+  border-top: 1px solid darkgrey;
+}
+
+.rbc-current-time-indicator {
+  background-color: red;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+
+.modal-content {
+  background-color: white !important;
+  border-radius: 8px;
+  width: 400px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  height: 100%;
+
+  h2 {
+    margin-top: 0;
+    font-size: 20px;
+    font-family: 500;
+    line-height: 25px;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    gap: 20px;
+
+    select {
+      border-radius: 4px;
+      padding: 10px;
+    }
+  }
+
+  label {
+    margin: 10px 0 5px;
+  }
+
+  input {
+    padding: 8px;
+    margin-bottom: 15px;
+  }
+
+  button {
+    padding: 10px;
+    margin-right: 10px;
+  }
+}
+
+.time-picker-container {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid darkgrey;
+  border-bottom: 1px solid darkgrey;
+
+  .time-picker {
+    width: 100%;
+  }
+
+  .time-picker:first-child {
+    border-right: 1px solid darkgrey;
+  }
+
+  input {
+    border: none;
+    margin-bottom: 0;
+  }
+
+  label {
+    color: darkgrey;
+  }
+}
+
+.rbc-time-view {
+  border-radius: 30px;
+}
+
+button {
+  padding: 4px 30px !important;
+  border-radius: 10px !important;
+  cursor: pointer !important;
+}
+
+.close-btn {
+  background-color: white;
+  border: 1px solid #5b4e9c;
+  color: #5b4e9c;
+}
+
+.book-btn {
+  border: 1px solid #5b4e9c;
+  background-color: #5b4e9c;
+  color: white;
+}
