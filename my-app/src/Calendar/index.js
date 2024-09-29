@@ -4,11 +4,6 @@ import moment from "moment";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import "../Calendar/style.css";
 import eventsData from "../Calendar/event.js";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faChevronLeft,
-  faChevronRight,
-} from "@fortawesome/free-solid-svg-icons";
 
 // Modal component
 const Modal = ({
@@ -103,36 +98,6 @@ const Modal = ({
   );
 };
 
-const CustomToolbar = (props) => {
-  const goToBack = () => {
-    props.onNavigate("PREV"); // Move to previous date (week, day, or month)
-  };
-
-  const goToNext = () => {
-    props.onNavigate("NEXT"); // Move to next date (week, day, or month)
-  };
-
-  const goToToday = () => {
-    props.onNavigate("TODAY"); // Move to the current date
-  };
-
-  return (
-    <div className="rbc-toolbar">
-      <span className="rbc-btn-group">
-        <div onClick={goToToday}>Today</div>
-        <FontAwesomeIcon icon={faChevronLeft} onClick={goToBack} />
-        <FontAwesomeIcon icon={faChevronRight} onClick={goToNext} />
-      </span>
-      <span className="rbc-toolbar-label">{props.label}</span>
-      <span className="rbc-btn-group">
-        <button onClick={() => props.onView("day")}>Day</button>
-        <button onClick={() => props.onView("week")}>Week</button>
-        <button onClick={() => props.onView("month")}>Month</button>
-      </span>
-    </div>
-  );
-};
-
 const CalendarComponent = () => {
   const [showModal, setShowModal] = useState(false);
   const [selectedDate, setSelectedDate] = useState(""); // Date state
@@ -164,7 +129,7 @@ const CalendarComponent = () => {
       <Calendar
         events={events} // Use the updated events state
         view={"day"}
-        views={["day", "week", "month"]}
+        views={["day"]}
         defaultDate={new Date()}
         step={15}
         timeslots={4}
@@ -172,9 +137,6 @@ const CalendarComponent = () => {
         selectable={true}
         onSelectSlot={handleSlotClick} // Handle click to open modal and get date/time
         style={{ height: "100%" }}
-        components={{
-          toolbar: CustomToolbar,
-        }}
       />
       {/* Modal to display on slot click */}
       <Modal

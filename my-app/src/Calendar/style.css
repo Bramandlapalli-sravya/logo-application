@@ -111,23 +111,3 @@ button {
   background-color: #5b4e9c;
   color: white;
 }
-
-.rbc-btn-group {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-
-  &:last-child {
-    margin-left: 60px;
-  }
-}
-
-.rbc-toolbar-label {
-  flex-grow: 0 !important;
-}
-
-.rbc-toolbar {
-  display: flex;
-  justify-content: flex-start;
-  padding: 0 40px;
-}
